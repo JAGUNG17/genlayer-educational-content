@@ -290,5 +290,5 @@ Understanding this architecture is crucial for developing effective Intelligent 
 ---
 
 **Last Updated:** March 2026  
-**Author:** Manus AI  
+**Author:** kuru  
 **Version:** 1.0

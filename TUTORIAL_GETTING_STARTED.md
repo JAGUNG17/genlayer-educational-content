@@ -446,5 +446,5 @@ Now that you understand the fundamentals of Intelligent Contracts, explore these
 ---
 
 **Last Updated:** March 2026  
-**Author:** Manus AI  
+**Author:** kuru  
 **Version:** 1.0

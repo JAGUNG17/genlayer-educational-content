@@ -412,5 +412,5 @@ As GenLayer matures, we expect to see Intelligent Contracts revolutionize indust
 ---
 
 **Last Updated:** March 2026  
-**Author:** Manus AI  
+**Author:** kuru  
 **Version:** 1.0

@@ -197,7 +197,7 @@ This educational material is provided for informational purposes only. While eff
 ## 🎓 About This Content
 
 **Created:** March 2026  
-**Author:** Manus AI  
+**Author:** kuru  
 **Version:** 1.0  
 **Last Updated:** March 22, 2026
 

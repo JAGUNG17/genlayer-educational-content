@@ -340,5 +340,5 @@ Understanding when to use comparative versus non-comparative validation is cruci
 ---
 
 **Last Updated:** March 2026  
-**Author:** Manus AI  
+**Author:** kuru  
 **Version:** 1.0
