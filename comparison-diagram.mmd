@@ -1,0 +1,40 @@
+graph LR
+    subgraph Traditional["Traditional Smart Contracts"]
+        T1["Deterministic Execution"]
+        T2["Limited Data Access"]
+        T3["Code-Based Logic"]
+        T4["Oracle Dependency"]
+        T5["Exact Matching Consensus"]
+    end
+    
+    subgraph Intelligent["Intelligent Contracts"]
+        I1["Deterministic + Non-Deterministic"]
+        I2["Web API Access"]
+        I3["AI-Powered Logic"]
+        I4["Direct Web Access"]
+        I5["Flexible Consensus"]
+    end
+    
+    subgraph Capabilities["New Capabilities"]
+        C1["Natural Language Processing"]
+        C2["Real-Time Data Integration"]
+        C3["Qualitative Decision Making"]
+        C4["Complex Reasoning"]
+        C5["Semantic Understanding"]
+    end
+    
+    T1 -.->|Enhanced| I1
+    T2 -.->|Expanded| I2
+    T3 -.->|Augmented| I3
+    T4 -.->|Replaced| I4
+    T5 -.->|Improved| I5
+    
+    I1 --> C1
+    I2 --> C2
+    I3 --> C3
+    I4 --> C4
+    I5 --> C5
+    
+    style Traditional fill:#ffebee
+    style Intelligent fill:#e8f5e9
+    style Capabilities fill:#e3f2fd

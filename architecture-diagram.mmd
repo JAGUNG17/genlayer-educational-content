@@ -1,0 +1,48 @@
+graph TB
+    A["Client Layer"]
+    B["GenLayer Network"]
+    C["External Services"]
+    D["Consensus Mechanism"]
+    
+    A1["DApp Frontend"]
+    A2["GenLayer SDK"]
+    
+    B1["Leader Validator"]
+    B2["Validator Nodes"]
+    B3["GenVM Runtime"]
+    B4["Intelligent Contract"]
+    B5["Contract State"]
+    B6["Transaction Log"]
+    
+    C1["LLM APIs"]
+    C2["Web APIs"]
+    C3["Data Sources"]
+    
+    D1["Comparative Validation"]
+    D2["Non-Comparative Validation"]
+    
+    A --> A1
+    A --> A2
+    B --> B1
+    B --> B2
+    B --> B3
+    B --> B4
+    B --> B5
+    B --> B6
+    C --> C1
+    C --> C2
+    C --> C3
+    D --> D1
+    D --> D2
+    
+    A1 -->|Submit| A2
+    A2 -->|Send| B1
+    B1 -->|Execute| B3
+    B3 -->|Run| B4
+    B4 -->|Call| C1
+    B4 -->|Fetch| C2
+    B1 -->|Propose| B2
+    B2 -->|Verify| B3
+    B3 -->|Apply| D
+    D -->|Store| B5
+    B5 -->|Record| B6

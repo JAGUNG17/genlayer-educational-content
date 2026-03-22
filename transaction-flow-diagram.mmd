@@ -1,0 +1,47 @@
+sequenceDiagram
+    participant User as User/DApp
+    participant SDK as GenLayer SDK
+    participant Network as GenLayer Network
+    participant Leader as Leader Validator
+    participant Validators as Other Validators
+    participant GenVM as GenVM Runtime
+    participant LLM as External LLM
+    participant Storage as Contract Storage
+    
+    User->>SDK: Submit Transaction
+    SDK->>Network: Send Signed Transaction
+    Network->>Leader: Assign Transaction to Leader
+    
+    Leader->>GenVM: Execute Contract Method
+    GenVM->>GenVM: Run Deterministic Code
+    
+    alt Non-Deterministic Operation
+        GenVM->>LLM: Call LLM with Prompt
+        LLM-->>GenVM: Return Response
+        GenVM->>GenVM: Apply Equivalence Principle
+    end
+    
+    GenVM-->>Leader: Return Result
+    Leader->>Network: Propose Result to Validators
+    
+    par Validator Verification
+        Validators->>GenVM: Execute Same Contract
+        GenVM->>GenVM: Run Deterministic Code
+        alt Non-Deterministic Operation
+            GenVM->>LLM: Call LLM with Prompt
+            LLM-->>GenVM: Return Response
+            GenVM->>GenVM: Check Against Criteria
+        end
+        GenVM-->>Validators: Return Result
+    end
+    
+    Validators->>Validators: Compare Results
+    alt Consensus Reached
+        Validators->>Storage: Store Result On-Chain
+        Storage-->>Network: Confirm Transaction
+        Network-->>SDK: Return Transaction Receipt
+        SDK-->>User: Update Application State
+    else Consensus Failed
+        Validators->>Network: Initiate Appeal Process
+        Network-->>User: Transaction Pending/Rejected
+    end
