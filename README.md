@@ -1,4 +1,4 @@
-# GenLayer Intelligent Contracts: Educational Content
+# GenLayer Intelligent Contracts: Educational Content🍗
 
 A comprehensive educational resource for learning about GenLayer Intelligent Contracts, including tutorials, technical documentation, architectural diagrams, and real-world use cases.
 
